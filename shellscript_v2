@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Escolha um comando para executar:"
+select COMMANDO in "ls" "systemctl status apache2" "systemctl start apache2" "systemctl stop apache2" "cd /var/log" "pwd" "date" "whoami" "uptime"
+    do
+        echo "Executando o comando: $COMMANDO"
+        eval "$COMMANDO"
+        break; 
+done
